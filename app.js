@@ -1,5 +1,23 @@
 /* WhiteScreen tool — pick a color, view it full screen, or download it as a PNG. */
 (function () {
+  /* Mobile menu (hamburger) — runs on every page, even without the tool. */
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.querySelector('nav.main');
+  if (menuBtn && mainNav) {
+    menuBtn.addEventListener('click', function () {
+      var open = mainNav.classList.toggle('open');
+      menuBtn.classList.toggle('open', open);
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        mainNav.classList.remove('open');
+        menuBtn.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
   var COLORS = {
     white:  { name: 'White background',  hex: '#FFFFFF' },
     black:  { name: 'Black background',  hex: '#000000' },
