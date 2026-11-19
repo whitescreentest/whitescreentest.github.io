@@ -159,8 +159,14 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 16px; fl
 footer.site nav { display: flex; gap: 16px; flex-wrap: wrap; }
 footer.site nav a { color: #d4d4d4; }
 @media (max-width: 820px) {
-  .tool-grid { grid-template-columns: 1fr; }
-  .opt-list { flex-direction: row; flex-wrap: wrap; }
+  /* Mobile order: preview first, then controls, then the note,
+     then the color options below the note, then the swatches. */
+  .tool { display: flex; flex-direction: column; }
+  .tool-grid { display: contents; }
+  .preview-wrap { order: 1; }
+  .controls { order: 2; }
+  .tool-note { order: 3; }
+  .opt-list { order: 4; flex-direction: row; flex-wrap: wrap; }
+  .swatches { order: 5; grid-template-columns: repeat(3, 1fr); }
   .hero h1 { font-size: 34px; }
-  .swatches { grid-template-columns: repeat(3, 1fr); }
 }
