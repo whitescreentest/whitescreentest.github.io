@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>White Screen - Full Screen White Display Test (Free)</title>
+<meta name="description" content="Test your screen with our free white screen tool. Open a full screen white, black, red, green or blue display, or pick any custom color — no app needed.">
+<meta name="keywords" content="white screen, white screen test, screen test, dead pixel test, black screen, color screen, display test, fullscreen white">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='white'/></svg>">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="mark">▦</span>White<b>Screen</b></a>
+    <nav class="main">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>White Screen</h1>
+    <p class="lede">Free white screen test — open a full screen solid color to check your display for dead pixels, backlight bleed and uneven brightness. No app, no sign-up.</p>
+  </div>
+
+  <!-- Tool — directly under the H1, layout like the reference screenshot -->
+  <div class="tool" id="tool">
+    <div class="tool-grid">
+      <div class="opt-list">
+        <button type="button" class="opt" data-color="yellow"><span class="sw" style="background:#FFFF00"></span><span>Yellow Screen</span></button>
+        <button type="button" class="opt" data-color="orange"><span class="sw" style="background:#FFA500"></span><span>Orange Screen</span></button>
+        <button type="button" class="opt" data-color="pink"><span class="sw" style="background:#FFC0CB"></span><span>Pink Screen</span></button>
+        <button type="button" class="opt" data-color="grey"><span class="sw" style="background:#808080"></span><span>Grey Screen</span></button>
+        <button type="button" class="opt" data-color="zoom"><span class="sw" style="background:#FFF3E0"></span><span>Zoom Light</span></button>
+        <button type="button" class="opt" data-color="ring"><span class="sw" style="background:#000;border:3px solid #fff"></span><span>Ring Light</span></button>
+      </div>
+      <div class="preview-wrap">
+        <div class="preview" id="preview"><div class="ring"></div>
+          <button type="button" class="fs-btn" id="fsBtn" title="Full screen">⛶</button>
+        </div>
+      </div>
+      <div class="controls">
+        <p class="cname" id="colorName">White background</p>
+        <select id="resSelect" aria-label="Resolution">
+          <option value="720p">720p</option>
+          <option value="1080p" selected>1080p</option>
+          <option value="4k">4K</option>
+          <option value="custom">Custom</option>
+        </select>
+        <div class="dim-row">
+          <label><input type="number" id="widthInput" value="1920" min="1" max="8000"> px</label>
+          <label><input type="number" id="heightInput" value="1080" min="1" max="8000"> px</label>
+        </div>
+        <button type="button" class="btn-download" id="downloadBtn">Download</button>
+        <div class="picker-row">
+          <input type="color" id="colorInput" value="#FFFFFF" aria-label="Pick a color">
+          <input type="text" id="hexInput" value="#FFFFFF" maxlength="7" aria-label="Hex color code">
+        </div>
+        <p class="hint">Click the preview (or press F) for full screen. Esc to exit.</p>
+      </div>
+    </div>
+    <div class="swatches">
+      <button type="button" class="swatch selected" data-color="white"><span class="tile" style="background:#FFFFFF"></span><span>White Screen</span></button>
+      <button type="button" class="swatch" data-color="black"><span class="tile" style="background:#000000"></span><span>Black Screen</span></button>
+      <button type="button" class="swatch" data-color="red"><span class="tile" style="background:#FF0000"></span><span>Red Screen</span></button>
+      <button type="button" class="swatch" data-color="green"><span class="tile" style="background:#00FF00"></span><span>Green Screen</span></button>
+      <button type="button" class="swatch" data-color="blue"><span class="tile" style="background:#0000FF"></span><span>Blue Screen</span></button>
+    </div>
+    <p class="tool-note">Pick a color above, then go full screen to test your display. Download saves the color as a PNG at your chosen size.</p>
+  </div>
+
+  <section class="block">
+    <h2>What is a white screen test?</h2>
+    <p class="intro">A white screen test fills your whole display with one solid color. With nothing else on screen, every flaw shows up: a dead pixel becomes a dark dot, backlight bleed shows as brighter patches at the edges, and uneven brightness is easy to spot. It is the simplest display test there is — and it needs no app.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>⚪ White screen</h3>
+        <p>The classic test. A pure white screen shows dead pixels, dust under the glass and uneven brightness better than any other color.</p>
+      </div>
+      <div class="card">
+        <h3>⬛ Black screen</h3>
+        <p>A black screen reveals backlight bleed and stuck pixels that glow when they should be off — the most common issue on new TVs and monitors.</p>
+      </div>
+      <div class="card">
+        <h3>🟥 Red, green &amp; blue</h3>
+        <p>Each primary color lights up only one set of subpixels. A dot that stays dark on red but not on green tells you exactly which subpixel is stuck.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>How to test your screen in 4 steps</h2>
+    <ol class="steps">
+      <li><h3>Pick a color</h3><p>Start with white. Click a color card below the preview, or choose from the list on the left.</p></li>
+      <li><h3>Go full screen</h3><p>Click the preview or the expand button (or press F). The color fills the whole display so nothing distracts from the test.</p></li>
+      <li><h3>Look closely</h3><p>Check the whole screen for dark dots, bright spots, lines or patches that are lighter or darker than the rest.</p></li>
+      <li><h3>Repeat with other colors</h3><p>Switch to black, then red, green and blue. Some faults only appear on one color, so test them all before you decide.</p></li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>More than a screen test</h2>
+    <div class="cards">
+      <div class="card"><h3>📹 Zoom light</h3><p>Turn your screen into a soft light for video calls. The warm Zoom Light setting gives your face an even, flattering glow.</p></div>
+      <div class="card"><h3>💡 Ring light</h3><p>The ring mode shows a glowing white ring on black — a quick stand-in for a ring light when you record video or take a photo.</p></div>
+      <div class="card"><h3>🧹 Screen cleaning</h3><p>A white screen makes smudges, fingerprints and dust on the glass obvious, so you can see what needs wiping.</p></div>
+      <div class="card"><h3>🌙 Night light</h3><p>A dim grey or warm screen works as a gentle night light for a dark room — bright enough to see by, soft enough to sleep near.</p></div>
+      <div class="card"><h3>🖼️ Color reference</h3><p>Designers and photographers use a solid color screen to compare shades and check how a color looks on a real display.</p></div>
+      <div class="card"><h3>⬇️ Download any color</h3><p>Need a plain color image? Pick a color and a size — 720p, 1080p, 4K or your own — and download it as a PNG.</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Which color tests what?</h2>
+    <table class="compare">
+      <tr><th>Screen color</th><th>Best for finding</th><th>Why it works</th></tr>
+      <tr><td>White</td><td>Dead pixels, dust, uneven brightness</td><td>Every pixel is fully on, so any dark spot stands out</td></tr>
+      <tr><td>Black</td><td>Backlight bleed, stuck bright pixels</td><td>Every pixel should be off, so any glow stands out</td></tr>
+      <tr><td>Red</td><td>Dead red subpixels</td><td>Only red subpixels are lit; a dark dot means a red fault</td></tr>
+      <tr><td>Green</td><td>Dead green subpixels</td><td>Only green subpixels are lit; green is also the brightest to the eye</td></tr>
+      <tr><td>Blue</td><td>Dead blue subpixels</td><td>Only blue subpixels are lit; blue faults are the hardest to see otherwise</td></tr>
+      <tr><td>Grey</td><td>Banding and dirty screen effect</td><td>Mid-grey shows vertical bands and cloudy patches clearly</td></tr>
+    </table>
+  </section>
+
+  <section class="block faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is a white screen used for?</summary>
+    <p>Mostly to test a display: it shows dead pixels, backlight bleed and uneven brightness. People also use it as a light for video calls, to check for dust while cleaning a screen, or as a plain color background.</p></details>
+    <details><summary>How do I make my screen completely white?</summary>
+    <p>Click the White Screen card above, then click the preview (or press F) to go full screen. The whole display turns white. Press Esc to exit.</p></details>
+    <details><summary>Can a white screen fix a stuck pixel?</summary>
+    <p>Sometimes. A stuck pixel is a pixel frozen on one color; flashing bright colors can occasionally unstick it. A truly dead pixel (always black) cannot be fixed by any screen. Our color screens can help you test which one it is.</p></details>
+    <details><summary>Is it safe for my screen?</summary>
+    <p>Yes. Showing a solid color is the most ordinary thing a screen does — it is no different from looking at a white web page. It cannot damage a healthy display.</p></details>
+    <details><summary>Does it work on phones and TVs too?</summary>
+    <p>Yes. Open this page on any device with a browser — phone, tablet, laptop, monitor or smart TV — pick a color and go full screen.</p></details>
+    <details><summary>What is backlight bleed?</summary>
+    <p>On LCD screens, light from behind the panel can leak around the edges, showing as bright patches on a black screen. A little bleed is normal; large bright areas on a new screen are worth returning.</p></details>
+    <details><summary>Can I download a white screen image?</summary>
+    <p>Yes. Choose a resolution (720p, 1080p, 4K) or type your own width and height, then press Download. You get a PNG of the current color at that exact size.</p></details>
+    <details><summary>What is the Zoom Light mode?</summary>
+    <p>It is a warm, soft white designed to light your face during video calls — like the light from a video-call lamp, but from your own screen.</p></details>
+    <details><summary>Do I need to install anything?</summary>
+    <p>No. This is a web tool — everything runs in your browser. No app, no download, no account.</p></details>
+    <details><summary>Is this tool free?</summary>
+    <p>Yes, completely free. Every color, every resolution and the download are free, with no limits.</p></details>
+  </section>
+
+  <section class="block">
+    <h2>Tips for a good screen test</h2>
+    <div class="cards">
+      <div class="card"><h3>🌑 Test in a dark room</h3><p>Backlight bleed and faint stuck pixels are much easier to see when the room is dark.</p></div>
+      <div class="card"><h3>🔆 Turn brightness up</h3><p>Set the screen to full brightness for the test, so faults have nowhere to hide.</p></div>
+      <div class="card"><h3>🔍 Get close</h3><p>Dead pixels are tiny. Look at the screen from close up, section by section, instead of from across the room.</p></div>
+      <div class="card"><h3>🎨 Try every color</h3><p>Test white, black, red, green and blue. A pixel can be dead in one color and fine in the others.</p></div>
+      <div class="card"><h3>🧽 Clean first</h3><p>Wipe the screen before testing. A speck of dust looks just like a dead pixel on a white screen.</p></div>
+      <div class="card"><h3>📱 Test new devices early</h3><p>Check a new phone, monitor or TV within the return window, so a faulty panel can still be exchanged.</p></div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Ready to test your screen?</h2>
+    <p>One click, full screen, no app needed.</p>
+    <a class="btn" href="#tool">Open White Screen</a>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 WhiteScreen — Free white screen test tool.</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
